@@ -1,15 +1,15 @@
-"D:\POIP\Dmitrii\POIP\TheFirstProject\main.cpp"
+"D:\POIP\POIP\TheFirstProject\main.cpp"
 -std=c++17
 -ferror-limit=0
 -fbracket-depth=512
 -funsigned-char
 -MD
 -MF
-D:\POIP\Dmitrii\POIP\TheFirstProject\Debug\BrowseInfo\main.pbi.dep
+D:\POIP\POIP\TheFirstProject\Debug\BrowseInfo\main.pbi.dep
 -o
-D:\POIP\Dmitrii\POIP\TheFirstProject\Debug\BrowseInfo\main.pbi
+D:\POIP\POIP\TheFirstProject\Debug\BrowseInfo\main.pbi
 -I
-D:\POIP\Dmitrii\POIP\TheFirstProject
+D:\POIP\POIP\TheFirstProject
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\inc\libcpp
 -I

@@ -1,0 +1,5 @@
+D:\GitHub\stm32Labs\MyNewProject\Debug\BrowseInfo\Led.pbi: \
+  D:\GitHub\stm32Labs\MyNewProject\Components\LED\Led.cpp \
+  D:\GitHub\stm32Labs\MyNewProject\Components\LED\led.h \
+  D:\GitHub\stm32Labs\MyNewProject\Hardware\Pin\ipin.h \
+  D:\GitHub\stm32Labs\MyNewProject\Hardware\Pin\ipintoggable.h

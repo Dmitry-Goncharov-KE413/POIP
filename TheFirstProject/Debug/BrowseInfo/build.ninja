@@ -24,18 +24,18 @@ rule PDBLINK
 
 
 #Build steps
-build D$:\POIP\Dmitrii\POIP\TheFirstProject\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
-  xclcommand = -source_file D$:\POIP\Dmitrii\POIP\TheFirstProject\main.cpp -xcl_file D$:\POIP\Dmitrii\POIP\TheFirstProject\Debug\BrowseInfo\main.xcl -macro_file D$:\POIP\Dmitrii\POIP\TheFirstProject\Debug\BrowseInfo\main.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
-  flags = D$:\POIP\Dmitrii\POIP\TheFirstProject\main.cpp -o D$:\POIP\Dmitrii\POIP\TheFirstProject\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --libc++ -Ol --c++ --no_exceptions --no_rtti --predef_macros D$:\POIP\Dmitrii\POIP\TheFirstProject\Debug\BrowseInfo\main.tmp
-  rspfile_name = D$:\POIP\Dmitrii\POIP\TheFirstProject\Debug\BrowseInfo\main.xcl.rsp
+build D$:\POIP\POIP\TheFirstProject\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file D$:\POIP\POIP\TheFirstProject\main.cpp -xcl_file D$:\POIP\POIP\TheFirstProject\Debug\BrowseInfo\main.xcl -macro_file D$:\POIP\POIP\TheFirstProject\Debug\BrowseInfo\main.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = D$:\POIP\POIP\TheFirstProject\main.cpp -o D$:\POIP\POIP\TheFirstProject\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --libc++ -Ol --c++ --no_exceptions --no_rtti --predef_macros D$:\POIP\POIP\TheFirstProject\Debug\BrowseInfo\main.tmp
+  rspfile_name = D$:\POIP\POIP\TheFirstProject\Debug\BrowseInfo\main.xcl.rsp
 
-build D$:\POIP\Dmitrii\POIP\TheFirstProject\Debug\BrowseInfo\main.pbi : INDEXER D$:\POIP\Dmitrii\POIP\TheFirstProject\Debug\BrowseInfo\main.xcl |  $
-D$:\POIP\Dmitrii\POIP\TheFirstProject\main.cpp
-  flags = -out=D$:\POIP\Dmitrii\POIP\TheFirstProject\Debug\BrowseInfo\main.pbi -f D$:\POIP\Dmitrii\POIP\TheFirstProject\Debug\BrowseInfo\main.xcl
+build D$:\POIP\POIP\TheFirstProject\Debug\BrowseInfo\main.pbi : INDEXER D$:\POIP\POIP\TheFirstProject\Debug\BrowseInfo\main.xcl |  $
+D$:\POIP\POIP\TheFirstProject\main.cpp
+  flags = -out=D$:\POIP\POIP\TheFirstProject\Debug\BrowseInfo\main.pbi -f D$:\POIP\POIP\TheFirstProject\Debug\BrowseInfo\main.xcl
 
-build D$:\POIP\Dmitrii\POIP\TheFirstProject\Debug\BrowseInfo\First.pbw : MAKEBROWSE D$:\POIP\Dmitrii\POIP\TheFirstProject\Debug\BrowseInfo\First.pbd
-  flags = D$:\POIP\Dmitrii\POIP\TheFirstProject\Debug\BrowseInfo\First.pbd -output D$:\POIP\Dmitrii\POIP\TheFirstProject\Debug\BrowseInfo\First.pbw
+build D$:\POIP\POIP\TheFirstProject\Debug\BrowseInfo\First.pbw : MAKEBROWSE D$:\POIP\POIP\TheFirstProject\Debug\BrowseInfo\First.pbd
+  flags = D$:\POIP\POIP\TheFirstProject\Debug\BrowseInfo\First.pbd -output D$:\POIP\POIP\TheFirstProject\Debug\BrowseInfo\First.pbw
 
-build D$:\POIP\Dmitrii\POIP\TheFirstProject\Debug\BrowseInfo\First.pbd : PDBLINK D$:\POIP\Dmitrii\POIP\TheFirstProject\Debug\BrowseInfo\main.pbi
-  flags = -M D$:\POIP\Dmitrii\POIP\TheFirstProject\Debug\BrowseInfo\First.pbd D$:\POIP\Dmitrii\POIP\TheFirstProject\Debug\BrowseInfo\main.pbi
+build D$:\POIP\POIP\TheFirstProject\Debug\BrowseInfo\First.pbd : PDBLINK D$:\POIP\POIP\TheFirstProject\Debug\BrowseInfo\main.pbi
+  flags = -M D$:\POIP\POIP\TheFirstProject\Debug\BrowseInfo\First.pbd D$:\POIP\POIP\TheFirstProject\Debug\BrowseInfo\main.pbi
 

@@ -1,0 +1,527 @@
+###############################################################################
+#
+# IAR ELF Linker V9.30.1.335/W64 for ARM                  14/Dec/2022  12:58:17
+# Copyright 2007-2022 IAR Systems AB.
+#
+#    Output file  =  D:\GitHub\stm32Labs\MyNewProject\Debug\Exe\myProject.out
+#    Map file     =  D:\GitHub\stm32Labs\MyNewProject\Debug\List\myProject.map
+#    Command line =
+#        -f D:\GitHub\stm32Labs\MyNewProject\Debug\Exe\myProject.out.rsp
+#        (D:\GitHub\stm32Labs\MyNewProject\Debug\Obj\Modes\AllMode\AllMode.o
+#        D:\GitHub\stm32Labs\MyNewProject\Debug\Obj\Components\Button\Button.o
+#        D:\GitHub\stm32Labs\MyNewProject\Debug\Obj\Modes\ChessMode\ChessMode.o
+#        D:\GitHub\stm32Labs\MyNewProject\Debug\Obj\Components\LED\Led.o
+#        D:\GitHub\stm32Labs\MyNewProject\Debug\Obj\main.o --no_out_extension
+#        -o D:\GitHub\stm32Labs\MyNewProject\Debug\Exe\myProject.out --map
+#        D:\GitHub\stm32Labs\MyNewProject\Debug\List\myProject.map --config
+#        "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.1\arm/config/linker/ST/stm32f411xC.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale --cpu=Cortex-M4
+#        --fpu=VFPv4_sp)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor                     = *
+__CPP_Exceptions              = Disabled
+__CPP_Language                = C++14
+__CPP_Library                 = DLib
+__CPP_Runtime                 = 1
+__Heap_Handler                = Basic
+__SystemLibrary               = DLib
+__dlib_dynamic_initialization = normal
+__dlib_version                = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because --advanced_heap
+was not specified and the application did not appear to
+be primarily optimized for speed.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x803'ffff] { ro };
+define block CSTACK with size = 8K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2001'ffff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section                Kind         Address    Size  Object
+  -------                ----         -------    ----  ------
+"A0":                                            0x40
+  .intvec                ro code   0x800'0000    0x40  vector_table_M.o [9]
+                                 - 0x800'0040    0x40
+
+"P1":                                           0x7bb
+  .text                  ro code   0x800'0040    0xe0  main.o [1]
+  .text                  ro code   0x800'0120    0x3c  Led.o [3]
+  .text                  ro code   0x800'015c    0x48  Button.o [2]
+  .text                  ro code   0x800'01a4    0x18  AllMode.o [4]
+  .text                  ro code   0x800'01bc    0x46  ChessMode.o [5]
+  .text                  ro code   0x800'0202    0x3a  packbits_init_single.o [9]
+  .text                  ro code   0x800'023c     0xc  main.o [1]
+  .text                  ro code   0x800'0248    0x14  main.o [1]
+  .text                  ro code   0x800'025c    0x14  main.o [1]
+  .text                  ro code   0x800'0270    0x14  main.o [1]
+  .text                  ro code   0x800'0284    0x14  main.o [1]
+  .text                  ro code   0x800'0298    0x14  main.o [1]
+  .text                  ro code   0x800'02ac    0x14  main.o [1]
+  .text                  ro code   0x800'02c0    0x14  main.o [1]
+  .text                  ro code   0x800'02d4    0x3c  main.o [1]
+  .text                  ro code   0x800'0310    0x1c  main.o [1]
+  .text                  ro code   0x800'032c     0x8  Led.o [3]
+  .text                  ro code   0x800'0334     0x8  Button.o [2]
+  .text                  ro code   0x800'033c     0x8  AllMode.o [4]
+  .text                  ro code   0x800'0344     0x6  ChessMode.o [5]
+  .text                  ro code   0x800'034a     0x8  ChessMode.o [5]
+  .text                  ro code   0x800'0352     0x4  main.o [1]
+  .text                  ro code   0x800'0356     0x6  main.o [1]
+  .text                  ro code   0x800'035c     0x2  Led.o [3]
+  .text                  ro code   0x800'035e     0x2  Button.o [2]
+  .text                  ro code   0x800'0360     0xc  AllMode.o [4]
+  .text                  ro code   0x800'036c     0x4  ChessMode.o [5]
+  .text                  ro code   0x800'0370    0x3c  AllMode.o [4]
+  .text                  ro code   0x800'03ac    0x14  AllMode.o [4]
+  .text                  ro code   0x800'03c0    0x14  AllMode.o [4]
+  .text                  ro code   0x800'03d4     0x4  AllMode.o [4]
+  .text                  ro code   0x800'03d8     0x8  AllMode.o [4]
+  .text                  ro code   0x800'03e0    0x14  AllMode.o [4]
+  .text                  ro code   0x800'03f4    0x10  AllMode.o [4]
+  .text                  ro code   0x800'0404     0x8  AllMode.o [4]
+  .text                  ro code   0x800'040c    0x12  AllMode.o [4]
+  .text                  ro code   0x800'041e     0x2  AllMode.o [4]
+  .text                  ro code   0x800'0420    0x3c  AllMode.o [4]
+  .text                  ro code   0x800'045c    0x28  data_init.o [9]
+  .text                  ro code   0x800'0484    0x22  fpinit_M.o [8]
+  .iar.init_table        const     0x800'04a8    0x14  - Linker created -
+  .text                  ro code   0x800'04bc     0x2  vectortrap_M.o [9]
+  .rodata                const     0x800'04c0    0x20  main.o [1]
+  .rodata                const     0x800'04e0    0x20  main.o [1]
+  .rodata                const     0x800'0500    0x20  main.o [1]
+  .rodata                const     0x800'0520    0x20  main.o [1]
+  .rodata                const     0x800'0540    0x20  main.o [1]
+  .text                  ro code   0x800'0560    0x20  cmain_call_ctors.o [9]
+  .text                  ro code   0x800'0580    0x18  cppinit.o [6]
+  .text                  ro code   0x800'0598    0x1e  cmain.o [9]
+  .text                  ro code   0x800'05b6     0x4  low_level_init.o [6]
+  .text                  ro code   0x800'05ba     0x4  exit.o [6]
+  .rodata                zero      0x800'05be     0x1  AllMode.o [4]
+  .rodata                const     0x800'05bf     0x1  unwind_debug.o [10]
+  .text                  ro code   0x800'05c0     0xa  cexit.o [9]
+  .text                  ro code   0x800'05cc    0x14  exit.o [10]
+  .text                  ro code   0x800'05e0    0x1c  cstartup_M.o [9]
+  .rodata                const     0x800'05fc    0x10  AllMode.o [4]
+  .rodata                const     0x800'060c    0x10  AllMode.o [4]
+  .rodata                const     0x800'061c    0x10  ChessMode.o [5]
+  .rodata                const     0x800'062c    0x10  Led.o [3]
+  .rodata                const     0x800'063c    0x10  main.o [1]
+  .text                  ro code   0x800'064c    0x10  main.o [1]
+  .text                  ro code   0x800'065c    0x10  main.o [1]
+  .text                  ro code   0x800'066c    0x10  main.o [1]
+  .text                  ro code   0x800'067c     0xc  main.o [1]
+  .text                  ro code   0x800'0688     0xc  main.o [1]
+  .text                  ro code   0x800'0694    0x10  main.o [1]
+  .text                  ro code   0x800'06a4     0xc  main.o [1]
+  .text                  ro code   0x800'06b0     0xc  main.o [1]
+  .text                  ro code   0x800'06bc    0x10  main.o [1]
+  .text                  ro code   0x800'06cc    0x10  main.o [1]
+  .text                  ro code   0x800'06dc    0x10  main.o [1]
+  .text                  ro code   0x800'06ec     0xe  main.o [1]
+  .text                  ro code   0x800'06fc     0xc  main.o [1]
+  .text                  ro code   0x800'0708     0xe  main.o [1]
+  .text                  ro code   0x800'0718     0xc  main.o [1]
+  .text                  ro code   0x800'0724     0xe  main.o [1]
+  .text                  ro code   0x800'0732     0xe  main.o [1]
+  .text                  ro code   0x800'0740     0xe  main.o [1]
+  .rodata                const     0x800'0750     0xc  Button.o [2]
+  .text                  ro code   0x800'075c     0xc  main.o [1]
+  .text                  ro code   0x800'0768     0xc  main.o [1]
+  .text                  ro code   0x800'0774     0xc  main.o [1]
+  .text                  ro code   0x800'0780     0xa  main.o [1]
+  .text                  ro code   0x800'078a     0xa  main.o [1]
+  .rodata                const     0x800'0794     0x8  main.o [1]
+  .rodata                const     0x800'079c     0x8  main.o [1]
+  .rodata                const     0x800'07a4     0x8  main.o [1]
+  .rodata                const     0x800'07ac     0x8  main.o [1]
+  .rodata                const     0x800'07b4     0x8  main.o [1]
+  .text                  ro code   0x800'07bc     0x6  main.o [1]
+  .text                  ro code   0x800'07c2     0x6  main.o [1]
+  .text                  ro code   0x800'07c8     0x6  main.o [1]
+  .text                  ro code   0x800'07ce     0x6  main.o [1]
+  .text                  ro code   0x800'07d4     0x6  main.o [1]
+  SHT$$PREINIT_ARRAY               0x800'07dc     0x0  <Block>
+  SHT$$INIT_ARRAY                  0x800'07dc     0x4  <Block>
+    .init_array          const     0x800'07dc     0x4  main.o [1]
+  __iar_tls$$INIT_ARRAY            0x800'07e0     0x0  <Block>
+  .rodata                const     0x800'07e0     0x0  packbits_init_single.o [9]
+  Initializer bytes      const     0x800'07e0    0x1b  <for P2-1>
+                                 - 0x800'07fb   0x7bb
+
+"P2", part 1 of 2:                               0x5c
+  P2-1                            0x2000'0000    0x5c  <Init block>
+    .data                inited   0x2000'0000    0x10  main.o [1]
+    .data                inited   0x2000'0010     0x8  main.o [1]
+    .bss                 inited   0x2000'0018     0x4  main.o [1]
+    .bss                 inited   0x2000'001c     0x8  main.o [1]
+    .bss                 inited   0x2000'0024     0x8  main.o [1]
+    .bss                 inited   0x2000'002c     0x8  main.o [1]
+    .bss                 inited   0x2000'0034     0x8  main.o [1]
+    .bss                 inited   0x2000'003c     0x8  main.o [1]
+    .bss                 inited   0x2000'0044     0x8  main.o [1]
+    .bss                 inited   0x2000'004c     0x8  main.o [1]
+    .bss                 inited   0x2000'0054     0x8  main.o [1]
+                                - 0x2000'005c    0x5c
+
+"P2", part 2 of 2:                             0x2000
+  CSTACK                          0x2000'0060  0x2000  <Block>
+    CSTACK               uninit   0x2000'0060  0x2000  <Block tail>
+                                - 0x2000'2060  0x2000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+   0x800'07fb   0x803'ffff  0x3'f805
+  0x2000'005c  0x2000'005f       0x4
+  0x2000'2060  0x2001'ffff  0x1'dfa0
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0x1b (29% of destination):
+           0x800'07e0  0x1b
+    1 destination range, total size 0x5c:
+          0x2000'0000  0x5c
+
+Extra (__iar_cstart_call_ctors)
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+command line/config:
+    -------------------------------------------------
+    Total:
+
+D:\GitHub\stm32Labs\MyNewProject\Debug\Obj: [1]
+    main.o                      814      247       92
+    -------------------------------------------------
+    Total:                      814      247       92
+
+D:\GitHub\stm32Labs\MyNewProject\Debug\Obj\Components\Button: [2]
+    Button.o                     82       12
+    -------------------------------------------------
+    Total:                       82       12
+
+D:\GitHub\stm32Labs\MyNewProject\Debug\Obj\Components\LED: [3]
+    Led.o                        70       16
+    -------------------------------------------------
+    Total:                       70       16
+
+D:\GitHub\stm32Labs\MyNewProject\Debug\Obj\Modes\AllMode: [4]
+    AllMode.o                   280       32        1
+    -------------------------------------------------
+    Total:                      280       32        1
+
+D:\GitHub\stm32Labs\MyNewProject\Debug\Obj\Modes\ChessMode: [5]
+    ChessMode.o                  88       16
+    -------------------------------------------------
+    Total:                       88       16
+
+dl7M_tln.a: [6]
+    cppinit.o                    24
+    exit.o                        4
+    low_level_init.o              4
+    -------------------------------------------------
+    Total:                       32
+
+dlpprt7M_tl_nc.a: [7]
+    -------------------------------------------------
+    Total:
+
+m7M_tls.a: [8]
+    fpinit_M.o                   34
+    -------------------------------------------------
+    Total:                       34
+
+rt7M_tl.a: [9]
+    cexit.o                      10
+    cmain.o                      30
+    cmain_call_ctors.o           32
+    cstartup_M.o                 28
+    data_init.o                  40
+    packbits_init_single.o       58
+    vector_table_M.o             64
+    vectortrap_M.o                2
+    -------------------------------------------------
+    Total:                      264
+
+shb_l.a: [10]
+    exit.o                       20
+    unwind_debug.o                         1
+    -------------------------------------------------
+    Total:                       20        1
+
+    Gaps                          6        6
+    Linker created                        20    8'192
+-----------------------------------------------------
+    Grand Total:              1'690      350    8'285
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address  Size  Type      Object
+-----                       -------  ----  ----      ------
+.iar.init_table$$Base    0x800'04a8         --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'04bc         --   Gb  - Linker created -
+?main                    0x800'0599        Code  Gb  cmain.o [9]
+AllMode::AllMode(std::array<ILed *, (unsigned int)4> const &)
+                         0x800'01a5  0x12  Code  Gb  AllMode.o [4]
+BusFault_Handler         0x800'04bd        Code  Wk  vectortrap_M.o [9]
+Button::Button(IPinReadable const &)
+                         0x800'015d  0x16  Code  Gb  Button.o [2]
+Button::IsPressed() const
+                         0x800'0179  0x2c  Code  Gb  Button.o [2]
+CSTACK$$Base            0x2000'0060         --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'2060         --   Gb  - Linker created -
+ChessMode::ChessMode(std::array<ILed *, (unsigned int)4> const &)
+                         0x800'01bd  0x18  Code  Gb  ChessMode.o [5]
+ChessMode::Clear() const
+                         0x800'01d9  0x2a  Code  Gb  ChessMode.o [5]
+DebugMon_Handler         0x800'04bd        Code  Wk  vectortrap_M.o [9]
+Delay(int)               0x800'0087  0x12  Code  Gb  main.o [1]
+Garland::Garland(std::array<IMode *, (unsigned int)2> const &)
+                         0x800'023d   0xc  Code  Wk  main.o [1]
+Garland::SwithNextMode() const
+                         0x800'02d5  0x3c  Code  Wk  main.o [1]
+Garland::UpdateCurrentMode() const
+                         0x800'0311  0x1c  Code  Wk  main.o [1]
+HardFault_Handler        0x800'04bd        Code  Wk  vectortrap_M.o [9]
+IButton::IButton()       0x800'035f   0x2  Code  Wk  Button.o [2]
+IButton::IButton() [subobject]
+                         0x800'0335   0x8  Code  Wk  Button.o [2]
+ILed *const  * std::_Addressof<ILed *const >(ILed *const  &, std::integral_constant<bool, (bool)0>)
+                         0x800'041f   0x2  Code  Wk  AllMode.o [4]
+ILed *const  * std::addressof<ILed *const >(ILed *const  &)
+                         0x800'03f5  0x10  Code  Wk  AllMode.o [4]
+ILed::ILed()             0x800'035d   0x2  Code  Wk  Led.o [3]
+ILed::ILed() [subobject]
+                         0x800'032d   0x8  Code  Wk  Led.o [3]
+IMode::Clear() const     0x800'0421  0x3c  Code  Wk  AllMode.o [4]
+IMode::IMode(std::array<ILed *, (unsigned int)4> const &)
+                         0x800'0361   0xc  Code  Wk  AllMode.o [4]
+IMode::IMode(std::array<ILed *, (unsigned int)4> const &) [subobject]
+                         0x800'033d   0x8  Code  Wk  AllMode.o [4]
+IMode::Update() const    0x800'0371  0x3c  Code  Wk  AllMode.o [4]
+Led::Led(IPin const &)   0x800'0121  0x16  Code  Gb  Led.o [3]
+Led::SwithOff() const    0x800'013d  0x10  Code  Gb  Led.o [3]
+Led::Toggle() const      0x800'014d  0x10  Code  Gb  Led.o [3]
+MemManage_Handler        0x800'04bd        Code  Wk  vectortrap_M.o [9]
+NMI_Handler              0x800'04bd        Code  Wk  vectortrap_M.o [9]
+PendSV_Handler           0x800'04bd        Code  Wk  vectortrap_M.o [9]
+Pin<GPIOA, (int)5>::IsHigh() const
+                         0x800'06ed   0xe  Code  Wk  main.o [1]
+Pin<GPIOA, (int)5>::Reset() const
+                         0x800'066d  0x10  Code  Wk  main.o [1]
+Pin<GPIOA, (int)5>::Toggle() const
+                         0x800'0781   0xa  Code  Wk  main.o [1]
+Pin<GPIOC, (int)13>::IsHigh() const
+                         0x800'0741   0xe  Code  Wk  main.o [1]
+Pin<GPIOC, (int)13>::Reset() const
+                         0x800'06dd  0x10  Code  Wk  main.o [1]
+Pin<GPIOC, (int)13>::Toggle() const
+                         0x800'0775   0xc  Code  Wk  main.o [1]
+Pin<GPIOC, (int)5>::IsHigh() const
+                         0x800'0709   0xe  Code  Wk  main.o [1]
+Pin<GPIOC, (int)5>::Reset() const
+                         0x800'0695  0x10  Code  Wk  main.o [1]
+Pin<GPIOC, (int)5>::Toggle() const
+                         0x800'078b   0xa  Code  Wk  main.o [1]
+Pin<GPIOC, (int)8>::IsHigh() const
+                         0x800'0725   0xe  Code  Wk  main.o [1]
+Pin<GPIOC, (int)8>::Reset() const
+                         0x800'06bd  0x10  Code  Wk  main.o [1]
+Pin<GPIOC, (int)8>::Toggle() const
+                         0x800'075d   0xc  Code  Wk  main.o [1]
+Pin<GPIOC, (int)9>::IsHigh() const
+                         0x800'0733   0xe  Code  Wk  main.o [1]
+Pin<GPIOC, (int)9>::Reset() const
+                         0x800'06cd  0x10  Code  Wk  main.o [1]
+Pin<GPIOC, (int)9>::Toggle() const
+                         0x800'0769   0xc  Code  Wk  main.o [1]
+Region$$Table$$Base      0x800'04a8         --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'04bc         --   Gb  - Linker created -
+SHT$$INIT_ARRAY$$Base    0x800'07dc         --   Gb  - Linker created -
+SHT$$INIT_ARRAY$$Limit   0x800'07e0         --   Gb  - Linker created -
+SHT$$PREINIT_ARRAY$$Base
+                         0x800'07dc         --   Gb  - Linker created -
+SHT$$PREINIT_ARRAY$$Limit
+                         0x800'07dc         --   Gb  - Linker created -
+SVC_Handler              0x800'04bd        Code  Wk  vectortrap_M.o [9]
+SysTick_Handler          0x800'04bd        Code  Wk  vectortrap_M.o [9]
+Thunk for (offset -4) Pin<GPIOA, (int)5>::IsHigh() const
+                         0x800'07bd   0x6  Code  Wk  main.o [1]
+Thunk for (offset -4) Pin<GPIOC, (int)13>::IsHigh() const
+                         0x800'07d5   0x6  Code  Wk  main.o [1]
+Thunk for (offset -4) Pin<GPIOC, (int)5>::IsHigh() const
+                         0x800'07c3   0x6  Code  Wk  main.o [1]
+Thunk for (offset -4) Pin<GPIOC, (int)8>::IsHigh() const
+                         0x800'07c9   0x6  Code  Wk  main.o [1]
+Thunk for (offset -4) Pin<GPIOC, (int)9>::IsHigh() const
+                         0x800'07cf   0x6  Code  Wk  main.o [1]
+UsageFault_Handler       0x800'04bd        Code  Wk  vectortrap_M.o [9]
+Virtual function table for AllMode
+                         0x800'060c  0x10  Data  Wk  AllMode.o [4]
+Virtual function table for Button
+                         0x800'0750   0xc  Data  Wk  Button.o [2]
+Virtual function table for ChessMode
+                         0x800'061c  0x10  Data  Wk  ChessMode.o [5]
+Virtual function table for Garland
+                         0x800'063c  0x10  Data  Wk  main.o [1]
+Virtual function table for IMode
+                         0x800'05fc  0x10  Data  Wk  AllMode.o [4]
+Virtual function table for Led
+                         0x800'062c  0x10  Data  Wk  Led.o [3]
+Virtual function table for Pin<GPIOA, (int)5>
+                         0x800'04c0  0x20  Data  Wk  main.o [1]
+Virtual function table for Pin<GPIOC, (int)13>
+                         0x800'0540  0x20  Data  Wk  main.o [1]
+Virtual function table for Pin<GPIOC, (int)5>
+                         0x800'04e0  0x20  Data  Wk  main.o [1]
+Virtual function table for Pin<GPIOC, (int)8>
+                         0x800'0500  0x20  Data  Wk  main.o [1]
+Virtual function table for Pin<GPIOC, (int)9>
+                         0x800'0520  0x20  Data  Wk  main.o [1]
+__call_ctors             0x800'0581  0x18  Code  Gb  cppinit.o [6]
+__cmain                  0x800'0599        Code  Gb  cmain.o [9]
+__exit                   0x800'05cd  0x14  Code  Gb  exit.o [10]
+__iar_cstart_call_ctors
+                         0x800'0561  0x20  Code  Gb  cmain_call_ctors.o [9]
+__iar_data_init3         0x800'045d  0x28  Code  Gb  data_init.o [9]
+__iar_debug_exceptions   0x800'05bf   0x1  Data  Gb  unwind_debug.o [10]
+__iar_init_vfp           0x800'0485        Code  Gb  fpinit_M.o [8]
+__iar_packbits_init_single3
+                         0x800'0203  0x3a  Code  Gb  packbits_init_single.o [9]
+__iar_program_start      0x800'05e1        Code  Gb  cstartup_M.o [9]
+__iar_tls$$INIT_ARRAY$$Base
+                         0x800'07e0         --   Gb  - Linker created -
+__iar_tls$$INIT_ARRAY$$Limit
+                         0x800'07e0         --   Gb  - Linker created -
+__low_level_init         0x800'05b7   0x4  Code  Gb  low_level_init.o [6]
+__sti__routine           0x800'0041  0x46  Code  Lc  main.o [1]
+__vector_table           0x800'0000        Data  Gb  vector_table_M.o [9]
+_call_main               0x800'05a5        Code  Gb  cmain.o [9]
+_exit                    0x800'05c1        Code  Gb  cexit.o [9]
+allMode                 0x2000'0044   0x8  Data  Gb  main.o [1]
+chessMode               0x2000'004c   0x8  Data  Gb  main.o [1]
+decltype(((param#1.size)())) std::size<std::array<ILed *, (unsigned int)4>>(std::array<ILed *, (unsigned int)4> const &)
+                         0x800'034b   0x8  Code  Wk  ChessMode.o [5]
+exit                     0x800'05bb   0x4  Code  Gb  exit.o [6]
+garland                 0x2000'0054   0x8  Data  Gb  main.o [1]
+led1                    0x2000'001c   0x8  Data  Gb  main.o [1]
+led2                    0x2000'0024   0x8  Data  Gb  main.o [1]
+led3                    0x2000'002c   0x8  Data  Gb  main.o [1]
+led4                    0x2000'0034   0x8  Data  Gb  main.o [1]
+leds                    0x2000'0000  0x10  Data  Gb  main.o [1]
+main                     0x800'0099  0x42  Code  Gb  main.o [1]
+modeNumber              0x2000'0018   0x4  Data  Lc  main.o [1]
+modes                   0x2000'0010   0x8  Data  Gb  main.o [1]
+pinA5                    0x800'0794   0x8  Data  Wk  main.o [1]
+pinC13                   0x800'07b4   0x8  Data  Wk  main.o [1]
+pinC5                    0x800'079c   0x8  Data  Wk  main.o [1]
+pinC8                    0x800'07a4   0x8  Data  Wk  main.o [1]
+pinC9                    0x800'07ac   0x8  Data  Wk  main.o [1]
+std::_Array_const_iterator<ILed *, (unsigned int)4>::_Array_const_iterator(ILed *const *, unsigned int)
+                         0x800'0405   0x8  Code  Wk  AllMode.o [4]
+std::_Array_const_iterator<ILed *, (unsigned int)4>::operator !=(const std::_Array_const_iterator<ILed *, (unsigned int)4>&) const
+                         0x800'03e1  0x14  Code  Wk  AllMode.o [4]
+std::_Array_const_iterator<ILed *, (unsigned int)4>::operator *() const
+                         0x800'03d5   0x4  Code  Wk  AllMode.o [4]
+std::_Array_const_iterator<ILed *, (unsigned int)4>::operator ++()
+                         0x800'03d9   0x8  Code  Wk  AllMode.o [4]
+std::_Array_const_iterator<ILed *, (unsigned int)4>::operator ==(const std::_Array_const_iterator<ILed *, (unsigned int)4>&) const
+                         0x800'040d  0x12  Code  Wk  AllMode.o [4]
+std::array<ILed *, (unsigned int)4>::begin() const
+                         0x800'03ad  0x14  Code  Wk  AllMode.o [4]
+std::array<ILed *, (unsigned int)4>::end() const
+                         0x800'03c1  0x14  Code  Wk  AllMode.o [4]
+std::array<ILed *, (unsigned int)4>::operator [](unsigned int) const
+                         0x800'0345   0x6  Code  Wk  ChessMode.o [5]
+std::array<ILed *, (unsigned int)4>::size() const
+                         0x800'036d   0x4  Code  Wk  ChessMode.o [5]
+std::array<IMode *, (unsigned int)2>::operator [](unsigned int) const
+                         0x800'0357   0x6  Code  Wk  main.o [1]
+std::array<IMode *, (unsigned int)2>::size() const
+                         0x800'0353   0x4  Code  Wk  main.o [1]
+unsigned int RegisterBase<(unsigned int)1073872912, (unsigned int)32, ReadMode>::Get<ReadMode, void>()
+                         0x800'06fd   0xc  Code  Wk  main.o [1]
+unsigned int RegisterBase<(unsigned int)1073872916, (unsigned int)32, ReadWriteMode>::Get<ReadWriteMode, void>()
+                         0x800'067d   0xc  Code  Wk  main.o [1]
+unsigned int RegisterBase<(unsigned int)1073874960, (unsigned int)32, ReadMode>::Get<ReadMode, void>()
+                         0x800'0719   0xc  Code  Wk  main.o [1]
+unsigned int RegisterBase<(unsigned int)1073874964, (unsigned int)32, ReadWriteMode>::Get<ReadWriteMode, void>()
+                         0x800'06a5   0xc  Code  Wk  main.o [1]
+userButton1             0x2000'003c   0x8  Data  Gb  main.o [1]
+void FieldValueBase<GPIOA_MODER_MODER15_Values<GPIOA::MODER, (unsigned int)10, (unsigned int)2, ReadWriteMode, GPIOA::GPIOAMODERBase>, GPIOA::GPIOAMODERBase, (unsigned int)1>::Set<ReadWriteMode, void>()
+                         0x800'0285  0x14  Code  Wk  main.o [1]
+void FieldValueBase<GPIOC_MODER_MODER15_Values<GPIOC::MODER, (unsigned int)10, (unsigned int)2, ReadWriteMode, GPIOC::GPIOCMODERBase>, GPIOC::GPIOCMODERBase, (unsigned int)1>::Set<ReadWriteMode, void>()
+                         0x800'0299  0x14  Code  Wk  main.o [1]
+void FieldValueBase<GPIOC_MODER_MODER15_Values<GPIOC::MODER, (unsigned int)16, (unsigned int)2, ReadWriteMode, GPIOC::GPIOCMODERBase>, GPIOC::GPIOCMODERBase, (unsigned int)1>::Set<ReadWriteMode, void>()
+                         0x800'02ad  0x14  Code  Wk  main.o [1]
+void FieldValueBase<GPIOC_MODER_MODER15_Values<GPIOC::MODER, (unsigned int)18, (unsigned int)2, ReadWriteMode, GPIOC::GPIOCMODERBase>, GPIOC::GPIOCMODERBase, (unsigned int)1>::Set<ReadWriteMode, void>()
+                         0x800'02c1  0x14  Code  Wk  main.o [1]
+void FieldValueBase<RCC_AHB1ENR_GPIOAEN_Values<RCC::AHB1ENR, (unsigned int)0, (unsigned int)1, ReadWriteMode, RCC::RCCAHB1ENRBase>, RCC::RCCAHB1ENRBase, (unsigned int)1>::Set<ReadWriteMode, void>()
+                         0x800'025d  0x14  Code  Wk  main.o [1]
+void FieldValueBase<RCC_AHB1ENR_GPIOBEN_Values<RCC::AHB1ENR, (unsigned int)1, (unsigned int)1, ReadWriteMode, RCC::RCCAHB1ENRBase>, RCC::RCCAHB1ENRBase, (unsigned int)1>::Set<ReadWriteMode, void>()
+                         0x800'0271  0x14  Code  Wk  main.o [1]
+void FieldValueBase<RCC_AHB1ENR_GPIOCEN_Values<RCC::AHB1ENR, (unsigned int)2, (unsigned int)1, ReadWriteMode, RCC::RCCAHB1ENRBase>, RCC::RCCAHB1ENRBase, (unsigned int)1>::Set<ReadWriteMode, void>()
+                         0x800'0249  0x14  Code  Wk  main.o [1]
+void RegisterBase<(unsigned int)1073872916, (unsigned int)32, ReadWriteMode>::Toggle<ReadWriteMode, void>(unsigned int)
+                         0x800'065d  0x10  Code  Wk  main.o [1]
+void RegisterBase<(unsigned int)1073872916, (unsigned int)32, ReadWriteMode>::Write<ReadWriteMode, void>(unsigned int)
+                         0x800'0689   0xc  Code  Wk  main.o [1]
+void RegisterBase<(unsigned int)1073874964, (unsigned int)32, ReadWriteMode>::Toggle<ReadWriteMode, void>(unsigned int)
+                         0x800'064d  0x10  Code  Wk  main.o [1]
+void RegisterBase<(unsigned int)1073874964, (unsigned int)32, ReadWriteMode>::Write<ReadWriteMode, void>(unsigned int)
+                         0x800'06b1   0xc  Code  Wk  main.o [1]
+
+
+[1] = D:\GitHub\stm32Labs\MyNewProject\Debug\Obj
+[2] = D:\GitHub\stm32Labs\MyNewProject\Debug\Obj\Components\Button
+[3] = D:\GitHub\stm32Labs\MyNewProject\Debug\Obj\Components\LED
+[4] = D:\GitHub\stm32Labs\MyNewProject\Debug\Obj\Modes\AllMode
+[5] = D:\GitHub\stm32Labs\MyNewProject\Debug\Obj\Modes\ChessMode
+[6] = dl7M_tln.a
+[7] = dlpprt7M_tl_nc.a
+[8] = m7M_tls.a
+[9] = rt7M_tl.a
+[10] = shb_l.a
+
+  1'690 bytes of readonly  code memory
+    350 bytes of readonly  data memory
+  8'285 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
