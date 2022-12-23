@@ -11,6 +11,7 @@
 #include "AllMode.h" // Mode of "All the LEDs are on"
 #include "ChessMode.h" // Mode of "Chess"
 #include "TreeMode.h" // Mode of "Christmas tree"
+#include "SlideMode.h" // Mode of "Christmas tree"
 #include "Garland.h" // Mode of "Garland"
 
 
@@ -47,14 +48,18 @@ Button userButton1(pinC13);
 //-------------Creation of objects with array of LEDs------------  
   AllMode allMode(leds); 
   ChessMode chessMode(leds);
+  TreeMode treeMode(leds);
+  SlideMode slideMode(leds);
 //------------------------------------------------------------------------------  
   
 //----------------------------------Array of modes--------------------------
-    using tArrayModes = std::array<IMode*,2>;
+    using tArrayModes = std::array<IMode*,4>;
     tArrayModes modes =
-    { 
+    {
       &allMode,
       &chessMode,
+      &treeMode,
+      &slideMode,
 
     };
 //------------------------------------------------------------------------------

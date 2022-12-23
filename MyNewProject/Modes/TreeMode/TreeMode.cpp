@@ -1,12 +1,19 @@
 #include "TreeMode.h"
 
-
-Mode::Mode(const IPin& pin): _pin(pin)
+TreeMode::TreeMode(const tArrayLeds& leds): IMode(leds)
 {
-  
+  Clear();
 }
-// ‘ункц€ обновить
-void Mode::Update() const
+
+void TreeMode:: Update()
 {
-  
+  _leds[LedNumber]->Toggle();
+  if(LedNumber == (size(_leds)-1))
+  {
+    LedNumber = 0;
+  }
+  else
+  {
+    LedNumber++;
+  }
 }

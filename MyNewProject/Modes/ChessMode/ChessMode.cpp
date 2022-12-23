@@ -6,7 +6,7 @@ ChessMode::ChessMode(const tArrayLeds& leds): IMode(leds)
   Clear();
 }
 
-void ChessMode::Clear() const
+void ChessMode::Clear()
 {
     for (std::uint32_t i = 0; i < std::size(_leds); ++i)
     {

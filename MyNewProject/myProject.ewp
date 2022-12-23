@@ -357,6 +357,7 @@
                     <state>$PROJ_DIR$\Modes\ChessMode</state>
                     <state>$PROJ_DIR$\Modes\TreeMode</state>
                     <state>$PROJ_DIR$\Modes\Garland</state>
+                    <state>D:\POIP\POIP\MyNewProject\Modes\SlideMode</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2165,7 +2166,7 @@
                 <name>$PROJ_DIR$\Components\Button\IButton.h</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\Components\Button\iPinReadable.h</name>
+                <name>$PROJ_DIR$\Components\Button\IPinReadable.h</name>
             </file>
         </group>
         <group>
@@ -2208,10 +2209,13 @@
             </file>
         </group>
         <group>
+            <name>Slide</name>
+            <file>
+                <name>$PROJ_DIR$\Modes\SlideMode\SlideMode.cpp</name>
+            </file>
+        </group>
+        <group>
             <name>TreeMode</name>
-            <excluded>
-                <configuration>Debug</configuration>
-            </excluded>
             <file>
                 <name>$PROJ_DIR$\Modes\TreeMode\TreeMode.cpp</name>
             </file>

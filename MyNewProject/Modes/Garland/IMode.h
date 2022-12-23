@@ -16,7 +16,7 @@ public:
   
   }
   
-  virtual void Update() const 
+  virtual void Update() 
   {
      for(auto& it:_leds) 
      {
@@ -24,7 +24,7 @@ public:
      }
   };
   
-  virtual void Clear() const 
+  virtual void Clear() 
   {
     for(auto& it:_leds) 
     {

@@ -7,8 +7,11 @@
 
 class TreeMode: public IMode
 {
-public: 
-   TreeMode(const tArrayLeds& led) ;
-   void Clear() const override ;
+public:
+   TreeMode(const tArrayLeds& led);
+   void Update() override;
+   
+public:
+  uint32_t LedNumber = 0;
 };
 #endif

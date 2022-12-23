@@ -1,7 +1,7 @@
-D:\GitHub\stm32Labs\MyNewProject\Debug\BrowseInfo\Modes\AllMode\AllMode.pbi: \
-  D:\GitHub\stm32Labs\MyNewProject\Modes\AllMode\AllMode.cpp \
-  D:\GitHub\stm32Labs\MyNewProject\Modes\AllMode\AllMode.h \
-  D:\GitHub\stm32Labs\MyNewProject\Modes\Garland\IMode.h \
+D:\POIP\POIP\MyNewProject\Debug\BrowseInfo\Modes\AllMode\AllMode.pbi: \
+  D:\POIP\POIP\MyNewProject\Modes\AllMode\AllMode.cpp \
+  D:\POIP\POIP\MyNewProject\Modes\AllMode\AllMode.h \
+  D:\POIP\POIP\MyNewProject\Modes\Garland\IMode.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\cpp\array \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\cpp\algorithm \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\cpp\xmemory \
@@ -75,5 +75,5 @@ D:\GitHub\stm32Labs\MyNewProject\Debug\BrowseInfo\Modes\AllMode\AllMode.pbi: \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\cpp\cerrno \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\errno.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\cpp\tuple \
-  D:\GitHub\stm32Labs\MyNewProject\Components\LED\ILED.h \
-  D:\GitHub\stm32Labs\MyNewProject\Components\LED\iled.h
+  D:\POIP\POIP\MyNewProject\Components\LED\ILED.h \
+  D:\POIP\POIP\MyNewProject\Components\LED\iled.h

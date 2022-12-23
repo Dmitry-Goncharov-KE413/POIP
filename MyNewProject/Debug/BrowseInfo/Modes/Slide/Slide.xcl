@@ -1,15 +1,15 @@
-"D:\POIP\POIP\MyNewProject\Modes\ChessMode\ChessMode.cpp"
+"D:\POIP\POIP\MyNewProject\Modes\Slide\Slide.cpp"
 -std=c++17
 -ferror-limit=0
 -fbracket-depth=512
 -funsigned-char
 -MD
 -MF
-D:\POIP\POIP\MyNewProject\Debug\BrowseInfo\Modes\ChessMode\ChessMode.pbi.dep
+D:\POIP\POIP\MyNewProject\Debug\BrowseInfo\Modes\Slide\Slide.pbi.dep
 -o
-D:\POIP\POIP\MyNewProject\Debug\BrowseInfo\Modes\ChessMode\ChessMode.pbi
+D:\POIP\POIP\MyNewProject\Debug\BrowseInfo\Modes\Slide\Slide.pbi
 -I
-D:\POIP\POIP\MyNewProject\Modes\ChessMode
+D:\POIP\POIP\MyNewProject\Modes\Slide
 -I
 D:\POIP\POIP\MyNewProject\AbstractHardware\Registers\STM32F411
 -I
@@ -39,7 +39,7 @@ D:\POIP\POIP\MyNewProject\Modes\TreeMode
 -I
 D:\POIP\POIP\MyNewProject\Modes\Garland
 -I
-D:\POIP\POIP\MyNewProject\Modes\SlideMode
+D:\POIP\POIP\MyNewProject\Modes\Slide
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\inc\cpp
 -I
@@ -77,7 +77,7 @@ D:\POIP\POIP\MyNewProject\Modes\TreeMode
 -I
 D:\POIP\POIP\MyNewProject\Modes\Garland
 -I
-D:\POIP\POIP\MyNewProject\Modes\SlideMode
+D:\POIP\POIP\MyNewProject\Modes\Slide
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

@@ -5,32 +5,36 @@
 #include <array>
 #include "IMode.h"
 
-static uint32_t inline modeNumber = 0;
-
-
-using tArrayModes = std::array<IMode*, 2>;
+using tArrayModes = std::array<IMode*, 4>;
 class Garland
 {
-public: 
+public:
   
-  Garland(const tArrayModes& modes): _modes(modes)
+  Garland(tArrayModes& modes): _modes(modes)
   {
 
   }
   
-  virtual void UpdateCurrentMode() const 
+  void UpdateCurrentMode() 
   {
      _modes[modeNumber]->Update();
   };
   
-  virtual void SwithNextMode() const 
-  {   
-//currentLed = ++currentLed == (sizeof...(portNums)) ? 0 : currentLed; // Перебирает все порты, и когда доходит до последнего, наинает с начала
-       modeNumber = ( modeNumber == (_modes.size()-1)) ? 0 : ++modeNumber;
-       _modes[modeNumber]->Clear();
+  virtual void SwithNextMode() 
+  {
+    if(modeNumber == _modes.size()-1)
+    {
+      modeNumber = 0;
+    }
+    else
+    {
+      modeNumber++;
+    }
+    _modes[modeNumber]->Clear(); // light off to all LEDs
   };
-protected:
-   const tArrayModes& _modes;
+private:
+  uint32_t modeNumber = 0;
+  tArrayModes& _modes;
 
 };
 

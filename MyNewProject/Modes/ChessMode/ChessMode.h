@@ -10,7 +10,7 @@ class ChessMode: public IMode
 {
 public: 
    ChessMode(const tArrayLeds& led) ;
-   void Clear() const override ;
+   void Clear() override;
 };
 
 #endif
