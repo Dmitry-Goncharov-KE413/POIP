@@ -79,8 +79,9 @@ D:\POIP\POIP\MyNewProject\Debug\BrowseInfo\main.pbi: \
   D:\POIP\POIP\MyNewProject\Components\Button\Button.h \
   D:\POIP\POIP\MyNewProject\Components\Button\IButton.h \
   D:\POIP\POIP\MyNewProject\Components\Button\iPinReadable.h \
-  D:\POIP\POIP\MyNewProject\Modes\AllMode\AllMode.h \
-  D:\POIP\POIP\MyNewProject\Modes\Garland\IMode.h \
+  D:\POIP\POIP\MyNewProject\Components\Observer\IButtonObserver.h \
+  D:\POIP\POIP\MyNewProject\Components\Observer\IObservable.h \
+  D:\POIP\POIP\MyNewProject\Components\Observer\IButtonObserver.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\cpp\array \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\cpp\iterator \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\cpp\istream \
@@ -109,6 +110,8 @@ D:\POIP\POIP\MyNewProject\Debug\BrowseInfo\main.pbi: \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\cpp\cerrno \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\c\errno.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\cpp\tuple \
+  D:\POIP\POIP\MyNewProject\Modes\AllMode\AllMode.h \
+  D:\POIP\POIP\MyNewProject\Modes\Garland\IMode.h \
   D:\POIP\POIP\MyNewProject\Components\LED\ILED.h \
   D:\POIP\POIP\MyNewProject\Components\LED\iled.h \
   D:\POIP\POIP\MyNewProject\Modes\ChessMode\ChessMode.h \
@@ -116,5 +119,9 @@ D:\POIP\POIP\MyNewProject\Debug\BrowseInfo\main.pbi: \
   D:\POIP\POIP\MyNewProject\Modes\TreeMode\TreeMode.h \
   D:\POIP\POIP\MyNewProject\Modes\SlideMode\SlideMode.h \
   D:\POIP\POIP\MyNewProject\Modes\Garland\Garland.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\cpp\iostream \
   D:\POIP\POIP\MyNewProject\Modes\Garland\IMode.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1\arm\inc\cpp\iostream
+  D:\POIP\POIP\MyNewProject\AbstractHardware\Registers\CortexM4\stkregisters.hpp \
+  D:\POIP\POIP\MyNewProject\AbstractHardware\Registers\CortexM4\FieldValues\stkfieldvalues.hpp \
+  D:\POIP\POIP\MyNewProject\AbstractHardware\Registers\CortexM4\scbregisters.hpp \
+  D:\POIP\POIP\MyNewProject\AbstractHardware\Registers\CortexM4\FieldValues\scbfieldvalues.hpp

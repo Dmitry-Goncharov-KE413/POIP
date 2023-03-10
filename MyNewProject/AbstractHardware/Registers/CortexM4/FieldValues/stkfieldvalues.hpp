@@ -12,7 +12,7 @@
 
 #include "fieldvalue.hpp"     //for FieldValues 
 
-template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
+template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType>
 struct STK_CTRL_ENABLE_Values: public RegisterField<Reg, offset, size, AccessMode> 
 {
   using Disable = FieldValue<STK_CTRL_ENABLE_Values, BaseType, 0U> ;

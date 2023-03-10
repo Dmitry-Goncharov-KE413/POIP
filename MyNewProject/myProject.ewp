@@ -358,6 +358,9 @@
                     <state>$PROJ_DIR$\Modes\TreeMode</state>
                     <state>$PROJ_DIR$\Modes\Garland</state>
                     <state>D:\POIP\POIP\MyNewProject\Modes\SlideMode</state>
+                    <state>$PROJ_DIR$\Components\Observer</state>
+                    <state>$PROJ_DIR$\AbstractHardware\Registers\CortexM4\FieldValues</state>
+                    <state>$PROJ_DIR$\AbstractHardware\Registers\CortexM4</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2225,6 +2228,15 @@
         </file>
         <file>
             <name>$PROJ_DIR$\Modes\Garland\IMode.h</name>
+        </file>
+    </group>
+    <group>
+        <name>Observer</name>
+        <file>
+            <name>$PROJ_DIR$\Components\Observer\IButtonObserver.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Components\Observer\IObservable.h</name>
         </file>
     </group>
     <file>

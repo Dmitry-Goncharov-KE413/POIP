@@ -41,6 +41,12 @@ D:\POIP\POIP\MyNewProject\Modes\Garland
 -I
 D:\POIP\POIP\MyNewProject\Modes\SlideMode
 -I
+D:\POIP\POIP\MyNewProject\Components\Observer
+-I
+D:\POIP\POIP\MyNewProject\AbstractHardware\Registers\CortexM4\FieldValues
+-I
+D:\POIP\POIP\MyNewProject\AbstractHardware\Registers\CortexM4
+-I
 C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\inc\cpp
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\inc\c\aarch32
@@ -78,6 +84,12 @@ D:\POIP\POIP\MyNewProject\Modes\TreeMode
 D:\POIP\POIP\MyNewProject\Modes\Garland
 -I
 D:\POIP\POIP\MyNewProject\Modes\SlideMode
+-I
+D:\POIP\POIP\MyNewProject\Components\Observer
+-I
+D:\POIP\POIP\MyNewProject\AbstractHardware\Registers\CortexM4\FieldValues
+-I
+D:\POIP\POIP\MyNewProject\AbstractHardware\Registers\CortexM4
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

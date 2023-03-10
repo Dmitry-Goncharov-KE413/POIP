@@ -13,17 +13,31 @@
 #include "TreeMode.h" // Mode of "Christmas tree"
 #include "SlideMode.h" // Mode of "Christmas tree"
 #include "Garland.h" // Mode of "Garland"
-
+#include "IButtonObserver.h"
+#include "IObservable.h"
 
 #include <iostream>
 #include <array> // Connection of libraries for work with arraies
+#include "stkregisters.hpp" // for STK (System Timer)
+#include "scbregisters.hpp" // for SCB
+
+constexpr std::uint32_t SystemClock = 8'000'000U;
+constexpr std::uint32_t OneMillisecondsRatio = 1000U;
+
+
 // -------------------------Function of delay-----------------------------------
-int Delay(int value)
+int Delay(std::uint32_t millisecons)
 {
-  for(int i = 0;i<value;++i)
+  const std::uint32_t delayCounts = millisecons*SystemClock/OneMillisecondsRatio - 1U;
+  
+  STK::VAL::Write(0U);
+  STK::LOAD::Write(delayCounts);
+  STK::CTRL::ENABLE::Enable::Set();
+  while(!STK::CTRL::COUNTFLAG::Overflow::IsSet())
   {
-    volatile int j = i; 
+    
   }
+  //STK::CTRL::ENABLE::Disable::Set();
 }
 //-------------Creation of LEDs with binding of pins--------------
 
@@ -65,7 +79,8 @@ Button userButton1(pinC13);
 //------------------------------------------------------------------------------
     
 //-------------Creation of object (garland) with binding of modes----------------  
-  Garland garland(modes); 
+  Garland garland(modes);
+  Gyru gyru;
 
 //------------------------------------------------------------------------------     
     
@@ -82,7 +97,8 @@ int main()
   GPIOC::MODER::MODER8::Output::Set();
   GPIOC::MODER::MODER9::Output::Set();
   
-  
+  userButton1.AddObserver(garland);
+  userButton1.AddObserver(gyru);
   
  //---------------------------Port and number of ports--------------------------------
 
@@ -90,13 +106,13 @@ int main()
   //std::uint32_t modeNumber = 0;
   for(;;)  
   {
-    Delay(100000); 
+    Delay(1000); 
     if(userButton1.IsPressed())
     { 
       garland.SwithNextMode();
     }
-    Delay(1000000);    
+    Delay(1000);   
     garland.UpdateCurrentMode();
   }
-  
+  // create a mode for adding of subscriber (for the next lesson)
 }

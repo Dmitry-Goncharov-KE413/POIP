@@ -3,18 +3,25 @@
 
 #include "IButton.h"
 #include "iPinReadable.h"
+#include "IButtonObserver.h"
+#include "IObservable.h"
+#include <array>
 
-
-class Button : public IButton
+class Button : public IButton, public IObservable
 {
 public: 
-  Button(const IPinReadable& pin) ; 
+  Button(const IPinReadable& pin); 
   
-   bool IsPressed() const override; 
- 
+  bool IsPressed() const override; 
+  void AddObserver(IButtonObserver& observer) override;
   
 private:
-    const IPinReadable& _pin; 
+    const IPinReadable& _pin;
+    std::array<IButtonObserver*, 4> _observers;
+    int32_t _currentObserver = 0;
 };
+
+
+
 
 #endif

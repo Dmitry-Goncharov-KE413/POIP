@@ -2917,6 +2917,15 @@
             <name>$PROJ_DIR$\Modes\Garland\IMode.h</name>
         </file>
     </group>
+    <group>
+        <name>Observer</name>
+        <file>
+            <name>$PROJ_DIR$\Components\Observer\IButtonObserver.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Components\Observer\IObservable.h</name>
+        </file>
+    </group>
     <file>
         <name>$PROJ_DIR$\main.cpp</name>
     </file>

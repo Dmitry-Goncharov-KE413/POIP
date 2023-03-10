@@ -3,5 +3,8 @@
     <project>
         <path>$WS_DIR$\myProject.ewp</path>
     </project>
+    <project>
+        <path>$WS_DIR$\..\Project_for_timers\Timers.ewp</path>
+    </project>
     <batchBuild />
 </workspace>
